@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "[E] panic: Do not trigger packaging workflows on main branch!" >&2
+exit 1

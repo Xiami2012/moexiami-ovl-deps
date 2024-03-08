@@ -1,0 +1,16 @@
+name: Package dependencies
+on: workflow_dispatch
+jobs:
+  main:
+    name: main.sh
+    permissions:
+      contents: "write"
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Build
+      run: ./main.sh
+      shell: bash
+    # "6 hours" (the default value) is just too long
+    timeout-minutes: 5

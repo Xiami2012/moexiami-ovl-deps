@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e
 
 if [[ -z "${GEN_GO_DEPS}" ]]; then
 	exit 0

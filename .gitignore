@@ -1,5 +1,5 @@
 .vim/
 .*.sw[pon]
 
-/config
+# Go
 go-mod/
