@@ -8,11 +8,11 @@ PV=1.18.1
 P="${PN}-${PV}"
 #S=${P}
 SOURCE_DATE_EPOCH=1709827227
-SRC_URI="https://github.com/MetaCubeX/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.xz"
-SRC_SHA256SUM="ddca7b6c9131ee067b906cc91360837a0e5bdee08a89851226aaed0adc71c086 ${P}.tar.xz"
+SRC_URI="https://github.com/MetaCubeX/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_SHA256SUM="ddca7b6c9131ee067b906cc91360837a0e5bdee08a89851226aaed0adc71c086 ${P}.tar.gz"
 
 config_src_unpack() {
-	tar -xf "${P}".tar.xz
+	tar -xf "${P}".tar.gz
 }
 
 # Actions
