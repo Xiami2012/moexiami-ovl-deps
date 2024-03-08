@@ -10,7 +10,6 @@ echo "[I] Running go mod download..." >&2
 go mod download -modcacherw -x
 popd >/dev/null
 
-export XZ_OPTS="-T0 -9"
 # Make a reproducible tarball.
 # Assume go will make file permissions stable so there are no --mode=go+u,go-w .
 #
