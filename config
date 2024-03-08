@@ -1,4 +1,19 @@
 #!/usr/bin/env bash
 
-echo "[E] panic: Do not trigger packaging workflows on main branch!" >&2
-exit 1
+# shellcheck disable=SC2034
+
+# Basic info
+PN=mihomo
+PV=1.18.1
+P="${PN}-${PV}"
+#S=${P}
+SOURCE_DATE_EPOCH=1709827227
+SRC_URI="https://github.com/MetaCubeX/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.xz"
+SRC_SHA256SUM="ddca7b6c9131ee067b906cc91360837a0e5bdee08a89851226aaed0adc71c086 ${P}.tar.xz"
+
+config_src_unpack() {
+	tar -xf "${P}".tar.xz
+}
+
+# Actions
+GEN_GO_DEPS=1
